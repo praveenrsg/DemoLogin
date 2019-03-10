@@ -1,0 +1,56 @@
+[
+  {
+    "PatientID": 1,
+    "PatientName": "Praveen",
+    "Age": "28 Years",
+    "Address": "BTM 2nd stage",
+    "Doctor": "Kumar",
+    "IsNormal": "Normal",
+    "ImgUrl": "/Content/images/1.jpg"
+  },
+  {
+    "PatientID": 2,
+    "PatientName": "Sumit",
+    "Age": "28 Years",
+    "Address": "BTM 1st Stage",
+    "Doctor": "Navin",
+    "IsNormal": "Normal",
+    "ImgUrl": "/Content/images/2.jpg"
+  },
+  {
+    "PatientID": 3,
+    "PatientName": "Sanjay",
+    "Age": "23 Years",
+    "Address": "Basavangudi",
+    "Doctor": "Amit",
+    "IsNormal": "Abnormal",
+    "ImgUrl": "/Content/images/3.jpg"
+  },
+  {
+    "PatientID": 4,
+    "PatientName": "Sunil",
+    "Age": "29 Years",
+    "Address": "Yashwanthpur",
+    "Doctor": "Senthil",
+    "IsNormal": "Abnormal",
+    "ImgUrl": "/Content/images/4.jpg"
+  },
+  {
+    "PatientID": 5,
+    "PatientName": "Rajesh",
+    "Age": "35 Years",
+    "Address": "Bansankari 3rd Stage",
+    "Doctor": "Nagraju",
+    "IsNormal": "Abnormal",
+    "ImgUrl": "/Content/images/5.jpg"
+  },
+  {
+    "PatientID": 6,
+    "PatientName": "Anuja N",
+    "Age": "42 Years",
+    "Address": "Bommansandra,Bangalore",
+    "Doctor": "Venketesh",
+    "IsNormal": "Normal",
+    "ImgUrl": "/Content/images/6.jpg"
+  }
+]
