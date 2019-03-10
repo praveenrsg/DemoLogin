@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewData["Title"] = "PatientDetails";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<div id="content" ng-controller="PatientController">
+    <span ng-show="isViewLoading" class="viewLoading">
+        <img src="~/Content/images/ng-loader.gif" /> loading...
+    </span>
+    <div class="row" style="padding-top:90px">
+        <div class="col-sm-3">
+
+            <table class="table table-striped">
+                <thead style="background-color: #0074d9;">
+                    <tr style="background-color: #0074d9;">
+                        <th colspan="2">PATIENTS LIST</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="patModel in ListPatient">
+                        <td><a href="#" ng-click="getPatient(patModel)" title="Edit Record">{{patModel.PatientName}}</a></td>
+                        <td>{{patModel.Age}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-9">
+            <table class="table table-borderless">
+                <tbody>
+                    <tr ng-repeat="patModel in PatientByNameList">
+                        <td>
+                            <table class="table table-borderless">
+                                <thead style="background-color: #999;">
+                                    <tr>
+                                        <th>Patient Name</th>
+                                        <th>Age</th>
+                                        <th>Address</th>
+                                        <th>Doctor</th>
+                                        <th>IsNormal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{patModel.PatientName}}</td>
+                                        <td>{{patModel.Age}}</td>
+                                        <td>{{patModel.Address}}</td>
+                                        <td>{{patModel.Doctor}}</td>
+                                        <td>{{patModel.IsNormal}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">
+                                            <img height="200px" src={{patModel.ImgUrl}} />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+@section JavaScript{
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/ScriptsNg/PatientController.js"></script>
+}
+
+
+
+

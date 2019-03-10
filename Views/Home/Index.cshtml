@@ -1,0 +1,47 @@
+﻿@model DemoLogin.Models.LoginModel 
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6" style="padding-top: 60px;">
+        <div class="panel panel-primary" >
+            <div class="panel-heading">User Login</div>
+            <div class="panel-body" style="padding-top: 15px;    padding-right: 15px;    padding-bottom: -15px;   padding-left: 15px;">
+                @using (Html.BeginForm("Login", "PatientLogin", FormMethod.Post, new { @id = "formPatient", @class = "form-horizontal", role = "form", }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 text-center">
+                            <div>
+                                <label for="txtUserName">User Name </label>
+                                @Html.TextBoxFor(model => model.UserName, new {@style= "border: none; box-shadow: 0 2px 2px #ddd", @class = "form-control", @type = "text", @id = "txtUserName", })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 text-center">
+                            <div><br />
+                                <label for="txtPassword">Password</label>
+                                @Html.TextBoxFor(model => model.Password, new { @style = "border: none; box-shadow: 0 2px 2px #ddd", @class = "form-control", @type = "Password",  @id = "txtPassword",  })
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div>
+                                <br />
+                                @Html.ActionLink(" ", "PatientDetailsAction", "PatientDetails", null, new { @style = "border-radius: 50%", @class = "small atagremove btn btn-success glyphicon glyphicon-arrow-right" })
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
